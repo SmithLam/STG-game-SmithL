@@ -4,6 +4,15 @@ class SceneMainMenu extends Phaser.Scene {
     }
   
     preload(){
+
+        //load-space-background
+        this.load.image('space', 'img/purple-background-750x750.png');
+
+        //load-player image
+        this.load.spritesheet('player', 'img/shipsprite1.png',
+            {frameWidth: 65, frameHeight: 60, frame:0}
+            );  
+
         //btn-image
         this.load.image("sprBtnPlay", "img/sprBtnPlay.png");
         this.load.image("sprBtnPlayHover", "img/sprBtnPlayHover.png");
@@ -16,14 +25,6 @@ class SceneMainMenu extends Phaser.Scene {
         this.load.audio("sndExplode0", "sound/Explosion-sound.mp3");
         this.load.audio("sndExplode1", "sound/Free-explosion-sound-effect.mp3");
 
-        //load-space-background
-        this.load.image('space', 'img/purple background.jpg');
-
-        //load-player image
-        this.load.spritesheet('player', 'img/shipsprite1.png',
-            {frameWidth: 65, frameHeight: 60, frame:0}
-            );  
-  
         
     }
 

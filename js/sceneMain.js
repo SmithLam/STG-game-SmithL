@@ -4,7 +4,7 @@ class SceneMain extends Phaser.Scene {
     }
     preload(){
         //load-space-background
-        this.load.image('space', 'img/purple background.jpg');
+        this.load.image('space', 'img/purple-background-750x750.png');
     
         //load-player image
         this.load.spritesheet('player', 'img/shipsprite1.png',
@@ -17,20 +17,10 @@ class SceneMain extends Phaser.Scene {
         //load-enemy-image
         this.load.image('alien1', 'img/alien 3 40x40.png');
     
-        //load-enemy-bullet
-        this.load.image('enemy-bullet', 'img/enemy bullet.png')
-    
-        //load-explosion
-        this.load.spritesheet('explosion', 'img/explosion.png',
-        {frameWidth: 128, frameHeight: 128, frame:0}
-        );  
        //sound
         this.load.audio("sndExplode0", "sound/Explosion-sound.mp3");
         this.load.audio("sndExplode1", "sound/Free-explosion-sound-effect.mp3");
-        this.load.audio("sndLaser", "sound/Gunshot-sound.wav");
         this.load.audio("sndLaser2", "sound/sdnMachineGun.wav");
-        //load button
-        this.load.image("sprBtnPlay", "img/sprBtnPlay.png");
 
     }
     
@@ -40,15 +30,12 @@ class SceneMain extends Phaser.Scene {
         this.space.setOrigin(0,0);
         this.space.setScrollFactor(0);
     
-    
-    
         //-create-player-image
         player = this.physics.add.sprite(385, 520, 'player');
         player.setBounce(0.1);
         player.setCollideWorldBounds(true);
         player.body.maxVelocity.setTo(MAXSPEED, MAXSPEED);
         player.body.drag.setTo(DRAG, DRAG);
-   
 
         // animation
         this.anims.create({
@@ -166,8 +153,6 @@ class SceneMain extends Phaser.Scene {
         scoreText = this.add.text(25, 25, 'Score: 0', { fontSize: '32px', fill: '#F8F8FF' });
 
         livesText = this.add.text(550, 25, 'Lives: 5', { fontSize: '32px', fill: '#F8F8FF' });
-
-
 
         //game-over
     

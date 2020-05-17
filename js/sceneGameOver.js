@@ -5,7 +5,7 @@ class SceneGameOver extends Phaser.Scene {
     
     preload(){
         //load-space-background
-        this.load.image('space', 'img/purple background.jpg');
+        this.load.image('space', 'img/purple-background-750x750.png');
 
         //load-player image
         this.load.spritesheet('player', 'img/shipsprite1.png',
@@ -19,7 +19,6 @@ class SceneGameOver extends Phaser.Scene {
       //audio
       this.load.audio("sndBtnOver", "sound/sndBtnOver.wav");
       this.load.audio("sndBtnDown", "sound/sndBtnDown.wav");
-      this.load.audio("sndLaser", "sound/Gunshot-sound.wav");
       this.load.audio("sndExplode0", "sound/Explosion-sound.mp3");
         this.load.audio("sndExplode1", "sound/Free-explosion-sound-effect.mp3");
     

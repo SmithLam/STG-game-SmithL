@@ -4,23 +4,23 @@ class SceneWin extends Phaser.Scene {
     }
     
     preload(){
+ 
         //load-space-background
-        this.load.image('space', 'img/purple background.jpg');
+        this.load.image('space', 'img/purple-background-750x750.png');
 
         //load-player image
         this.load.spritesheet('player', 'img/shipsprite1.png',
             {frameWidth: 65, frameHeight: 60, frame:0}
             );  
-        
-            this.load.image("sprBtnRestart", "img/sprBtnRestart.png");
-            this.load.image("sprBtnRestartHover", "img/sprBtnRestartHover.png");
-            this.load.image("sprBtnRestartDown", "img/sprBtnRestartDown.png");
+  
+        this.load.image("sprBtnRestart", "img/sprBtnRestart.png");
+        this.load.image("sprBtnRestartHover", "img/sprBtnRestartHover.png");
+        this.load.image("sprBtnRestartDown", "img/sprBtnRestartDown.png");
             
-            this.load.audio("sndBtnOver", "sound/sndBtnOver.wav");
-            this.load.audio("sndBtnDown", "sound/sndBtnDown.wav");
-            this.load.audio("sndLaser", "sound/Gunshot-sound.wav");
-            this.load.audio("sndExplode0", "sound/Explosion-sound.mp3");
-            this.load.audio("sndExplode1", "sound/Free-explosion-sound-effect.mp3");
+        this.load.audio("sndBtnOver", "sound/sndBtnOver.wav");
+        this.load.audio("sndBtnDown", "sound/sndBtnDown.wav");
+        this.load.audio("sndExplode0", "sound/Explosion-sound.mp3");
+        this.load.audio("sndExplode1", "sound/Free-explosion-sound-effect.mp3");
     
     }
 
